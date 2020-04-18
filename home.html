@@ -294,8 +294,64 @@
       }
     </script>
 
+    <!-- Regular Expression -->
+    <script type="text/javascript">
+      var str = "Taiwan";
+      var pattern = /a/i; // i: case insensitive, g: global -> search
 
+      // str.match(pattern); // return all the characters that match the pattern
+      // str.search(pattern); // return index of first match
+      // pattern.test(str); // return true or false that the pattern matches
+      // \d // digits
+      // \w // all characters
+      // \W // all characters other than numbers and alphabets
+      // \s // spaces
+      // \d{number of digits}
+    </script>
 
+    <!-- Errors -->
+    <!-- Use try-catch block to make errors appear -->
+    <script type="text/javascript">
+      try {
+        sum(3,4);
+      } catch(err) {
+        //do somthing
+        // print err.me
+      }
+    </script>
+
+    <!-- Validate Password -->
+    <script type="text/javascript">
+      function check() {
+        var password = document.getElementById("password1").value;
+        var confirm = document.getElementById("confirmPassword1").value;
+        var errorMessage = "";
+        var errorID = document.getElementById("error");
+        try {
+          if (password.length < 6) {
+            errorMessage += "<br /> Password too short.";
+          }
+          if (/[A-Z]/g.test(password) == false) {
+            errorMessage += "<br /> Password must contain at least one capital letter.";
+          }
+          if (/\d/g.test(password) == false) {
+            errorMessage += "<br /> Password must contain at least one number.";
+          }
+          if (password != confirm) {
+            errorMessage += "<br /> Password must match!";
+          }
+          throw errorMessage;
+        } catch(err) {
+          errorID.innerHTML = err;
+        }
+      }
+    </script>
+    <p>Your password must contain at least 6 characters, 1 number and 1 capital letter.</p>
+    <p>Enter Password: </p><input type="password" id="password1">
+    <p>Confirm Password: </p><input type="password" id="confirmPassword1">
+    <br>
+    <button type="button" onclick="check()">Submit</button>
+    <p id="error"></p>
 
 
   </body>
