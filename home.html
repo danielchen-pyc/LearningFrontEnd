@@ -340,7 +340,11 @@
           if (password != confirm) {
             errorMessage += "<br /> Password must match!";
           }
-          throw errorMessage;
+          if (errorMessage == "") {
+            throw "Valid Password!"
+          } else {
+            throw errorMessage;
+          }
         } catch(err) {
           errorID.innerHTML = err;
         }
@@ -352,6 +356,18 @@
     <br>
     <button type="button" onclick="check()">Submit</button>
     <p id="error"></p>
+
+    <!-- Simple Counter -->
+    <p id="counter"></p>
+    <button onclick="clearInterval(myCounter)">Stop Counting!</button>
+    <button onclick="clearTimeout(delayedWelcomeMessage)">Avoid Welcome Message</button>
+    <script type="text/javascript">
+      var counter = document.getElementById("counter");
+      var x = 0;
+      var myCounter = setInterval(function(){x++; counter.innerHTML = x;}, 1000);
+      var delayedWelcomeMessage = setTimeout(function() {window.alert("Welcome to my page!")}, 5000);
+      myCounter();
+    </script>
 
 
   </body>
