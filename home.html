@@ -365,10 +365,23 @@
       var counter = document.getElementById("counter");
       var x = 0;
       var myCounter = setInterval(function(){x++; counter.innerHTML = x;}, 1000);
-      var delayedWelcomeMessage = setTimeout(function() {window.alert("Welcome to my page!")}, 5000);
+      // var delayedWelcomeMessage = setTimeout(function() {window.alert("Welcome to my page!")}, 5000);
       myCounter();
     </script>
 
+    <!-- Window and Screen -->
+    <script type="text/javascript">
+      var windowHeight = window.innerHeight ||
+      document.documentElement.clientHeight ||
+      document.body.clientHeight;
+
+      var screenWidth = window.screen.width;
+      // window.alert(screenWidth);
+      var availableHeight = window.screen.availHeight;
+      // window.alert(availableHeight);
+
+      // document.getElementById("id").style.width = window.innerHeight + 'px';
+    </script>
 
   </body>
 </html>
