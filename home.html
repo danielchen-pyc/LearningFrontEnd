@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My first webpage</title>
+  </head>
+  <body>
+    <!-- basic html -->
+    <p>Hello World!</p>
+    <iframe width="130" height="50" src="https://www.youtube.com/embed/1gTWfV1QQ-s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <table>
+      <tr>
+        <th>Name</th><th>Company</th><th>Email</th>
+      </tr>
+      <tr>
+        <td>Daniel</td><td>Carbonet Water Treatment</td><td>daniel@carbonet.com</td>
+      </tr>
+      <tr>
+        <td>Bill Gates</td><td>Microsoft</td><td>I dont even know</td>
+      </tr>
+    </table>
+    <p>Hello &nbsp; World!</p>
+    <body>
+      <form class="" action="index.html" method="post">
+        <label for="email">Email: </label>
+        <input id="email" type="text" name="Email" size="20px" placeholder="Email">
+        <br>
+        <br>
+        <label for="password">Password: </label>
+        <input id="password" type="password" name="password" size="20px" placeholder="Password">
+        <br>
+        <br>
+        <input type="submit" name="submit" value="Login">
+      </form>
+    </body>
+    <body>
+      <form method="post">
+        <select id="shipment" name="shipment">
+          <option value="Free shipment">Free Shipment</option>
+          <option value="One day shipping">One day shipping</option>
+          <option value="Two day shipping">Two day shipping</option>
+        </select>
+        <br>
+        <label>Paypal <input type="radio" name="payment" value="paypal"></label>
+        <br>
+        <label>Credit Card <input type="radio" name="payment2" value="credit"></label>
+        <br>
+        <label>Debit Card <input type="radio" name="payment3" value="Debit"></label>
+        <br><br>
+        <label for="comment">Comments: <br><textarea name="comment" id="comment" rows="8" cols="80">Hello!!!!</textarea></label>
+        <br><br>
+        <label for="emailUpdate">Sign me up for email upates! <input type="checkbox" name="emailUpdate" value="" checked="checked"></label>
+        <br>
+        <input type="submit" name="submit" value="Submit!">
+
+      </form>
+    </body>
+    <body>
+      <p>This <em>word</em> is emphasized.</p>
+      <p>This <strong>word</strong> is strong.</p>
+      <p>This <i>word</i> is italic.</p>
+      <p>This <strike>word</strike> is crossed out.</p>
+      <p>CO<sub>2</sub> and <i>x</i><sup>2</sup></p>
+    </body>
+    <!-- basic css syntax -->
+    <!-- inline css -->
+    <p style="color:green; font-size:300%">Hello</p>
+
+    <!-- internal css should live inside the header -->
+    <!-- <style media="screen">
+      p {
+        color: blue;
+        font-size: 100%;
+      }
+    </style> -->
+
+    <!-- external css should be in the header too -->
+    <!-- <link rel="stylesheet" href="css/style.css" type="text/css"> -->
+
+    <!-- class (style multiple) and id (style just the specified) -->
+    <!-- <style media="screen">
+      #first {
+        color: blue;
+        font-size: 100%;
+      }
+      .blue {
+      color: blue;
+      }
+    </style> -->
+    <p id="first">Hello</p>
+    <p class="blue">My name is Daniel.</p>
+
+    <!-- div and span -->
+    <style>
+      .bluebox{
+        background: linear-gradient(to bottom left, #3A5795, #FFF392);
+        /* background: radial-gradient(circle, blue 5%, #3A5795, #FFF392); */
+        color: white;
+        height: 20px;
+        width: auto;
+        float: right;
+        font-family: sans-serif;
+      }
+      .redbox{
+        background-color: rgb(222, 70, 22);
+        color: white;
+        height: 20px;
+        width: auto;
+        /* top right bottom left */
+        padding: 20px 5px 20px 3px;
+        outline-style: solid;
+        outline-color: #b23981;
+        outline-width: thick;
+        clear: both;
+        text-shadow: 3px 3px #A3B1A3;
+        text-indent: 30px;
+        font-family: monospace;
+        transform: rotate(1deg);
+      }
+      .greenbox{
+        background-color: #3B9904;
+        color: white;
+        height: 50px;
+        width: auto;
+        margin: 10px 5px;
+        border-radius: 10px;
+        float: left;
+        text-decoration: overline;
+        font-weight: bold;
+        font-family: cursive;
+      }
+      .blackbox{
+        background-color: #000000;
+        color: white;
+        height: 50px;
+        width: 500px;
+        position: relative;
+        left: 30px;
+        letter-spacing: 10px;
+        font-family: "Times New Roman", Times, serif;
+        transition: width 1s;
+      }
+      .blackbox:hover{
+        width: 300px;
+      }
+      .yellowbox{
+        background-color: #CCCC22;
+        color: black;
+        height: 50px;
+        width: 600px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* word-wrap: break-word; */
+        word-wrap: normal;
+        -webkit-animation: myanimation 10s;
+      }
+      @-webkit-keyframes myanimation {
+        from{background: green}
+        to{background: red}
+      }
+      .yellowbox:hover{
+        overflow: visible;
+      }
+      .textcolor{
+        background-color: #3B9904;
+      }
+    </style>
+    <div class="bluebox">
+      Facebook <span class="textcolor">Hi my name is Daniel</span>
+    </div>
+    <div class="greenbox">
+      Google
+    </div>
+    <div class="redbox">
+      Microsoft
+    </div>
+    <br>
+    <div class="blackbox">
+      Amazon
+    </div>
+    <br>
+    <div class="yellowbox">
+      Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft
+      Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft
+      Microsoft LongggggggggggggggggggggggggggMicrosoftMicrosoftMicrosoftMicrosoftMicrosoftMicrosoft
+      Microsoft Microsoft Microsoft Microsoft Microsoft
+      Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft
+      Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft
+      Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft
+      Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft
+      Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft
+    </div>
+
+    <!-- Box Model
+    Margin of for paragraphs is set by default to 16px -->
+
+    <!-- Image Sprite -->
+    <style>
+      #chicken{
+        width: 150px;
+        height: 150px;
+        background: url(images/chickens.png) 0 0;
+      }
+    </style>
+    <img id="chicken">
+
+    <!-- Image Opacity -->
+    <style media="screen">
+      .chickens{
+        width: 200px;
+        height: 400px;
+        opacity: 0.4;
+        margin-right: 50px;
+      }
+    </style>
+    <img class="chickens" src="images/chickens.png">
+
+    <!-- List Styling -->
+    <style media="screen">
+      ul.list{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      ul.list li{
+        background-color: blue;
+      }
+    </style>
+    <body>
+      <p>
+        <ul class="list">
+          <li>Paris</li>
+          <li>Berlin</li>
+          <li>London</li>
+          <li>Rome</li>
+        </ul>
+      </p>
+    </body>
+
+    <!-- Link Styling -->
+    <style media="screen">
+      a:link{
+        color: green;
+      }
+      a:hover{
+        font-size: 1.1em;
+      }
+      a:active{
+        font-size: 1.2em;
+      }
+      a:visited{
+        color: blue;
+      }
+    </style>
+    <a href="www.google.com">Google</a>
+
+    <!-- JavaScript -->
+    <p>JavaScript</p>
+    <button id="button" onclick="alert('How can I help')">Click me</button>
+    <script type="text/javascript">
+      // alert("Welcome!";
+      document.getElementById("button").onclick=function(){
+        alert('How can I help')
+      }
+    </script>
+
+    <!-- Change HTML Content Using JS -->
+    <button id="button2" onclick="alert('How can I help')">Click to change html content</button>
+    <script type="text/javascript">
+      // alert("Welcome!";
+      document.getElementById("button2").onclick=function(){
+        document.getElementById("amazon").innerHTML = "<p>amazon</p>"
+        <!-- Change HTML Style -->
+        document.getElementById("amazon").style.width = '50px';
+      }
+    </script>
+    <div class="blackbox" id="amazon">
+      Amazon
+    </div>
+
+    <!-- Change HTML using JS Variables -->
+    <button id="button3">Click to change color</button>
+    <script type="text/javascript">
+      // var color = 'rgb(18, 149, 68)';
+      // document.getElementById("amazon").style.backgroundColor = color;
+      var r, g, b, amazonColor;
+      document.getElementById("button3").onclick = function(){
+        r = Math.round(Math.random() * 256);
+        g = Math.round(Math.random() * 256);
+        b = Math.round(Math.random() * 256);
+        amazonColor = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+        document.getElementById("amazon").style.backgroundColor = amazonColor;
+        document.getElementById("amazon").innerHTML = '<p>' + amazonColor + '</p>';
+      }
+    </script>
+
+
+
+
+
+  </body>
+</html>
