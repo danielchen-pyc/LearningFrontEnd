@@ -31,12 +31,12 @@
     </div>
     <br>
     <div class="greenbox">
-      <p>Amazon</p>
+      <p id="amazon">Amazon</p>
     </div>
     <br>
     <p>Hello</p>
     <div class="redbox">
-      <p>Google</p>
+      <p id="google">Google</p>
       <p>Hello</p>
     </div>
     <div class="">
@@ -45,6 +45,14 @@
     </div>
     <br>
     <button type="button" id="changeFacebook">Change Facebook text</button>
+    <br>
+    <button type="button" id="addtext">Add text</button>
+    <br>
+    <button type="button" id="fadeout">Fade out Amazon</button>
+    <br>
+    <button type="button" id="fadetoggle">Fade Toggle Amazon</button>
+    <br>
+    <button type="button" id="animate">Animate Google</button>
     <script type="text/javascript">
       // $(document).ready(function(){
       //   $("p").hide();
@@ -107,11 +115,48 @@
       $("#changeFacebook").click(function(){
         // $("#facebook").text("This is Facebook.");
         $("#facebook").html("<p>Hello this is facebook</p>");
+        // $("#facebook").css("width", 300);
+        // $("#facebook").css("width", 100 * Math.random() - 50 + $("#facebook").width());
+        // $("#facebook").addClass("greenbox");
+        // $("#facebook").removeClass("greenbox");
       });
 
       // $("#changeLink").click(function(){
       //   $("#microsoftlink").attr({"href": "http://google.com", "title": "Google"});
       // });
+
+      //Add text
+      $("#addtext").click(function(){
+        // $("#facebook").append("<p>Hello</p>");
+        // $("#facebook").prepend("<p>Hello</p>");
+        $("#facebook").after("Hello");
+        $("#facebook").css("position", "absolute");
+        $("#facebook").css({'top': 200 * Math.random(), 'left': 200 * Math.random(),
+        'background-color': 'rgb(' + 230 * Math.random() + ', ' + 150 * Math.random()
+        + ', ' + 150 * Math.random() + ')'});
+
+        $("#facebook").wrap("<div></div>")
+      });
+
+
+      $(function(){
+        $("#fadeout").click(function(){
+          // $("#amazon").fadeOut("slow");
+          $("#amazon").fadeOut(3000, function() {
+            window.alert("Faded out amazon.");
+          });
+        });
+        $("#fadetoggle").click(function(){
+          // $("#amazon").fadeOut("slow");
+          $("#amazon").fadeToggle(1000);
+        });
+
+        $("#animate").click(functioin(){
+          $("#google").animate({width: '200px', height: '50px', opacity: '0.5'});
+        });
+      });
+
+
     </script>
   </body>
 </html>
