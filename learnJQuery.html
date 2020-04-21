@@ -84,59 +84,61 @@
         $("p").click(function(){
           // $("p").css("background-color", "rgba(205, 19, 44, 77)");
           // $(this).css("background-color", "rgba(205, 19, 44, 77)");
+
+          $("p").mouseover(function(){
+            // $(this).css("background-color", "rgba(189, 88, 55, 77)");
+          });
+
+          $("p").mouseout(function(){
+            // $(this).css("background-color", "rgba(189, 88, 55, 77)");
+          });
+
+          $("input").focus(function(){
+            // $(this).css("background-color", "rgba(189, 88, 55, 77)");
+          });
+
+          $("input").blur(function(){
+            // $(this).css("background-color", "rgba(189, 88, 55, 77)");
+          });
+
+          $("input").keyup(function(){
+            $(this).css("background-color", "rgba(88, 88, 189, 77)");
+          });
+
+          $("#submit").click(function(){
+            $("#input").css("background-color", "#ffffff");
+            $("#input").val("");
+          });
+
+          $("#changeFacebook").click(function(){
+            // $("#facebook").text("This is Facebook.");
+            $("#facebook").html("<p>Hello this is facebook</p>");
+            // $("#facebook").css("width", 300);
+            // $("#facebook").css("width", 100 * Math.random() - 50 + $("#facebook").width());
+            // $("#facebook").addClass("greenbox");
+            // $("#facebook").removeClass("greenbox");
+          });
+
+          // $("#changeLink").click(function(){
+          //   $("#microsoftlink").attr({"href": "http://google.com", "title": "Google"});
+          // });
+
+          //Add text
+          $("#addtext").click(function(){
+            // $("#facebook").append("<p>Hello</p>");
+            // $("#facebook").prepend("<p>Hello</p>");
+            $("#facebook").after("Hello");
+            $("#facebook").css("position", "absolute");
+            $("#facebook").css({'top': 200 * Math.random(), 'left': 200 * Math.random(),
+            'background-color': 'rgb(' + 230 * Math.random() + ', ' + 150 * Math.random()
+            + ', ' + 150 * Math.random() + ')'});
+
+            $("#facebook").wrap("<div></div>")
+          });
         });
       });
 
-      $("p").mouseover(function(){
-        // $(this).css("background-color", "rgba(189, 88, 55, 77)");
-      });
 
-      $("p").mouseout(function(){
-        // $(this).css("background-color", "rgba(189, 88, 55, 77)");
-      });
-
-      $("input").focus(function(){
-        // $(this).css("background-color", "rgba(189, 88, 55, 77)");
-      });
-
-      $("input").blur(function(){
-        // $(this).css("background-color", "rgba(189, 88, 55, 77)");
-      });
-
-      $("input").keyup(function(){
-        $(this).css("background-color", "rgba(88, 88, 189, 77)");
-      });
-
-      $("#submit").click(function(){
-        $("#input").css("background-color", "#ffffff");
-        $("#input").val("");
-      });
-
-      $("#changeFacebook").click(function(){
-        // $("#facebook").text("This is Facebook.");
-        $("#facebook").html("<p>Hello this is facebook</p>");
-        // $("#facebook").css("width", 300);
-        // $("#facebook").css("width", 100 * Math.random() - 50 + $("#facebook").width());
-        // $("#facebook").addClass("greenbox");
-        // $("#facebook").removeClass("greenbox");
-      });
-
-      // $("#changeLink").click(function(){
-      //   $("#microsoftlink").attr({"href": "http://google.com", "title": "Google"});
-      // });
-
-      //Add text
-      $("#addtext").click(function(){
-        // $("#facebook").append("<p>Hello</p>");
-        // $("#facebook").prepend("<p>Hello</p>");
-        $("#facebook").after("Hello");
-        $("#facebook").css("position", "absolute");
-        $("#facebook").css({'top': 200 * Math.random(), 'left': 200 * Math.random(),
-        'background-color': 'rgb(' + 230 * Math.random() + ', ' + 150 * Math.random()
-        + ', ' + 150 * Math.random() + ')'});
-
-        $("#facebook").wrap("<div></div>")
-      });
 
 
       $(function(){
@@ -151,8 +153,25 @@
           $("#amazon").fadeToggle(1000);
         });
 
-        $("#animate").click(functioin(){
-          $("#google").animate({width: '200px', height: '50px', opacity: '0.5'});
+        $("#animate").click(function(){
+          $("#google").delay(20).animate({width: '20px', height: '50px', opacity: '0.5'}, "slow");
+        });
+
+        // ajax
+        // $("#facebook").load("ajax/filename.txt", "#idname");
+
+        // $("button").click(function(){
+        //   // all the data in dataToLoad.txt will be stored in the data variable
+        //   $.ajax({url: "ajax/dataToLoad.txt", success: function(data){
+        //     $("#facebook").html(data);
+        //   }});
+        // });
+
+        $("button").click(function(){
+          // all the data in dataToLoad.txt will be stored in the data variable
+          $.ajax({url: "ajax/dataToLoad.txt"})done(funtion(somedata){
+            $("#facebook").html(somedata);
+          });
         });
       });
 
