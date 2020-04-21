@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Learning JQuery</title>
+    <!-- <script src="js/jquery-3.5.0.min.js"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </script>
+    <style media="screen">
+      .bluebox {
+        background-color: rgb(11, 11, 200);
+        height: 100px;
+        width: auto;
+      }
+      .greenbox {
+        background-color: rgb(11, 200, 11);
+        height: 100px;
+        width: auto;
+      }
+      .redbox {
+        background-color: rgb(200, 11, 11);
+        height: 100px;
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="firstPara">Hello, my name is Daniel.</p>
+    <div class="bluebox">
+      <p id="facebook">Facebook</p>
+    </div>
+    <br>
+    <div class="greenbox">
+      <p>Amazon</p>
+    </div>
+    <br>
+    <p>Hello</p>
+    <div class="redbox">
+      <p>Google</p>
+      <p>Hello</p>
+    </div>
+    <div class="">
+      Text: <input type="text" name="submit" id="input">
+      <button type="button" id="submit">Clear</button>
+    </div>
+    <br>
+    <button type="button" id="changeFacebook">Change Facebook text</button>
+    <script type="text/javascript">
+      // $(document).ready(function(){
+      //   $("p").hide();
+      // });
+      // $ready(function(){
+      //   $("p").hide();
+      // }); // this works too
+      $(function() {
+        $("*").css("font-size", 30); // all elements
+
+
+        // $("p").css("text-align", "center")
+        // $("div > p").css("text-align", "center"); // all p that are child of div
+
+        $("#firstPara").css("background-color", "rgb(15, 15, 255)");
+        $("div.bluebox").css("font-family", "monospace");
+        $("p:first-child, p:last-child").css("text-decoration", "underline");
+
+        // $("[href]").css("color", "red");
+        // $("li:first-child").css("background-color", "red");
+        // $("tr:odd") will select the odd rows in a table!
+        // $(":input") will select all the inputs
+        // $(":Submit") will select all the button submits
+
+        // $("div:has(table)") will select div tags with tables
+      });
+
+      $(function(){
+        $("p").click(function(){
+          // $("p").css("background-color", "rgba(205, 19, 44, 77)");
+          // $(this).css("background-color", "rgba(205, 19, 44, 77)");
+        });
+      });
+
+      $("p").mouseover(function(){
+        // $(this).css("background-color", "rgba(189, 88, 55, 77)");
+      });
+
+      $("p").mouseout(function(){
+        // $(this).css("background-color", "rgba(189, 88, 55, 77)");
+      });
+
+      $("input").focus(function(){
+        // $(this).css("background-color", "rgba(189, 88, 55, 77)");
+      });
+
+      $("input").blur(function(){
+        // $(this).css("background-color", "rgba(189, 88, 55, 77)");
+      });
+
+      $("input").keyup(function(){
+        $(this).css("background-color", "rgba(88, 88, 189, 77)");
+      });
+
+      $("#submit").click(function(){
+        $("#input").css("background-color", "#ffffff");
+        $("#input").val("");
+      });
+
+      $("#changeFacebook").click(function(){
+        // $("#facebook").text("This is Facebook.");
+        $("#facebook").html("<p>Hello this is facebook</p>");
+      });
+
+      // $("#changeLink").click(function(){
+      //   $("#microsoftlink").attr({"href": "http://google.com", "title": "Google"});
+      // });
+    </script>
+  </body>
+</html>
