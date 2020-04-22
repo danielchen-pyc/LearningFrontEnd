@@ -73,8 +73,24 @@
         <li class="ui-widget-content">Daniel</li>
         <li class="ui-widget-content">Hello</li>
         <li class="ui-widget-content">Hey</li>
-        <li class="ui-widget-content">Bro</li>
+        <li class="ui-widget-content notSortable">Bro</li>
       </ul>
+    </div>
+    <div id="resizer">
+      <div id="accordion">
+        <h3>Section 1</h3>
+        <div>
+          <p>Content 1</p>
+        </div>
+        <h3>Section 2</h3>
+        <div>
+          <p>Content 2</p>
+        </div>
+        <h3>Section 3</h3>
+        <div>
+          <p>Content 3</p>
+        </div>
+      </div>
     </div>
     <script type="text/javascript">
       // $(document).ready(function(){
@@ -245,15 +261,52 @@
       })
 
       // Selectable
+      // $(function(){
+      //   $("#list").selectable({
+      //     stop: function(){
+      //       $(".ui-selected").each(function(){
+      //         $('<p></p>').text($(this).text()).appendTo("#amazon2");
+      //       });
+      //     }
+      //   });
+      // });
+
+      // Sortable
       $(function(){
-        $("#list").selectable({
-          stop: function(){
-            $(".ui-selected").each(function(){
-              $('<p></p>').text($(this).text()).appendTo("#amazon2");
-            });
+        $("#list").sortable({
+          placeholder: "ui-state-error",
+          // placeholder: "ui-state-highlight"
+          cancel: ".notSortable"
+          // connectWith: ".connectedList" // connect with another
+          // sortable list (both lists need to have minimal height to
+          // make sure there is space for items to be moved in)
+        });
+      });
+
+      // Accordion
+      $(function(){
+        $("#accordion").accordion({
+          collapsible: true,
+          icons: {
+            header: "ui-icon-check",
+            activeHeader: "ui-icon-circle-check"
+          },
+          heightStyle: "content"
+        });
+
+        // Accordion Resizer
+        $("#resizer").resizable({
+          resize: function(){
+            $("#accordion").accordion("refresh");
           }
         });
       });
+
+      // Autocomplete
+
+
+
+
 
     </script>
   </body>
