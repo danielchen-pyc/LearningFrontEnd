@@ -31,6 +31,10 @@
         background: #953EBB;
         color: white;
       }
+      .ui-autocomplete{
+        max-height: 100px;
+        overflow-y: auto;
+      }
     </style>
   </head>
   <body>
@@ -92,6 +96,14 @@
         </div>
       </div>
     </div>
+    <p>Input your city: <input id="city"></p>
+    <button id="button1">Button1</button>
+    <button id="button2">Button2</button>
+    <button id="button3">Button3</button>
+
+
+
+    <!-- script -->
     <script type="text/javascript">
       // $(document).ready(function(){
       //   $("p").hide();
@@ -303,7 +315,30 @@
       });
 
       // Autocomplete
+      $(function(){
+        $("#city").autocomplete({
+          source: ["London", "Taipei", "Paris", "Vancouver", "Toronto", "Tokyo", "New York"]
+        });
+      });
 
+
+      // Button
+      $(function(){
+        $("#button1").button();
+        $("#button2").button({
+          icons: {
+            primary: "ui-icon-folder-open"
+          },
+          text: false
+        });
+        $("#button3").button({
+          icons: {
+            primary: ".ui-icon-mail-close",
+            secondary: ".ui-icon-zoomin"
+          },
+        });
+        // buttonset method for multiple buttons
+      });
 
 
 
