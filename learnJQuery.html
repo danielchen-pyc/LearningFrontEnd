@@ -24,6 +24,13 @@
         height: 100px;
         width: auto;
       }
+      #list .ui-selecting{
+        background: #746DA0;
+      }
+      #list .ui-selected{
+        background: #953EBB;
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -61,8 +68,13 @@
     <button type="button" id="fadetoggle">Fade Toggle Amazon</button>
     <br>
     <button type="button" id="animate">Animate Google</button>
-    <div id="Error" class="ui-state-default" style="height: 100px; margin-top:20px;">
-      <p>Error Message.</p>
+    <div>
+      <ul id="list">
+        <li class="ui-widget-content">Daniel</li>
+        <li class="ui-widget-content">Hello</li>
+        <li class="ui-widget-content">Hey</li>
+        <li class="ui-widget-content">Bro</li>
+      </ul>
     </div>
     <script type="text/javascript">
       // $(document).ready(function(){
@@ -234,7 +246,13 @@
 
       // Selectable
       $(function(){
-        $("#error").selectable();
+        $("#list").selectable({
+          stop: function(){
+            $(".ui-selected").each(function(){
+              $('<p></p>').text($(this).text()).appendTo("#amazon2");
+            });
+          }
+        });
       });
 
     </script>
