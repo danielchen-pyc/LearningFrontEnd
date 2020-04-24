@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- React Library -->
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <!-- React DOM Library -->
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <!-- Babel Library -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Let's React!</title>
+  </head>
+  <body>
+    <!-- Designated Location To Insert React Content -->
+    <div id="app">
+      React has not rendered yet
+    </div>
+
+    <!-- Javascript -->
+    <script type="text/babel">
+
+      // Create a variable for JSX and for location
+      var hello = <h1>Hello World</h1>;
+      var destination = document.getElementById("app");
+
+      // Render React to the DOM - Will Accept Two Arguments (React What, React Where)
+      ReactDOM.render(
+        // React What - JSX --> can only render one element (one parent)
+        hello,
+        // React Where - div with id of "APP"
+        destination
+      );
+    </script>
+  </body>
+</html>
