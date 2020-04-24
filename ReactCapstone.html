@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- React Library -->
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <!-- React DOM Library -->
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <!-- Babel Library -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Friendly</title>
+  </head>
+  <body>
+    <div id="app">
+      React has not rendered yet
+    </div>
+    <script type="text/babel">
+
+      // Friendly Complex: Avatar, Username, GetConnected Complex(like, share, add)
+
+      function Friendly() {
+        return(
+          <div>
+            <Avatar/>
+            <Username/>
+            <GetConnected/>
+          </div>
+        );
+      }
+
+
+      function Avatar() {
+        return(
+          <img src="images/chickens.png"/>
+        );
+      }
+
+      function Username() {
+        return(
+          <h1>Profile Name</h1>
+        );
+      }
+
+      function GetConnected() {
+        return(
+          <div>
+            <Like/>
+            <Share/>
+            <Add/>
+          </div>
+        );
+      }
+
+      function Like() {
+        return (
+          <i className="fa fa-thumbs-up"></i>
+        );
+      }
+
+      function Share() {
+        return (
+          <i className="fa fa-share"></i>
+        );
+      }
+
+      function Add() {
+        return (
+          <i className="fa fa-user-plus"></i>
+        );
+      }
+
+
+      ReactDOM.render(
+        <Friendly/>,
+        document.getElementById("app")
+      );
+
+    </script>
+  </body>
+</html>
