@@ -10,6 +10,7 @@
     <script src="https://fb.me/react-dom-0.14.3.js"></script>
     <!-- Babel Library -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>Let's React!</title>
   </head>
   <body>
@@ -32,6 +33,44 @@
         // React Where - div with id of "APP"
         destination
       );
+
+      // Create Stateless Fiunctional Component
+      var ColorSpectrum = function() {
+        return(
+         <h1>Red, Orange, Yellow, Green, Blue, Indigo, Violet</h1>
+        );
+      };
+
+      ReactDOM.render(
+        <ColorSpectrum/>,
+        document.getElementById("app")
+      );
+
+
+      // Create Class Component --> "this", lifecycle methods
+      class Shapes extends React.Component {
+        render() {
+          return(
+            <h1>Circle, Square, Rectangle</h1>
+          );
+        };
+      }
+
+      ReactDOM.render(
+        <Shapes/>,
+        document.getElementById("app")
+      );
+
+
+      // React Styling -> className="red"
+      // Styling Classes: Create an object with css attributes in it (numbers
+      // without pixels, strings with quotes, and camelcases)
+      // <h1 style={circleStyle}>Circle</h1>
+
+      // React Styling: Inline Approach
+
+
+
     </script>
   </body>
 </html>
