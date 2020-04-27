@@ -206,11 +206,170 @@
     </div>
 
 
+    <!-- Dropdown -->
+    <div class="container-fluid">
+      <div class="dropdown">
+        <button type="button" id="dropbutton" class="dropdown-toggle btn btn-info" data-toggle="dropdown">
+          Dropdown Plugin
+          <span class="caret"></span>
+        </button>
+        <div class="dropdown-menu" role="menu" aria-labelledby="dropbutton">
+          <a href="#" class="dropdown-header" role="presentation">Header 1</a>
+          <a href="#" class="dropdown-header" role="menuitem">Item</a>
+          <a href="#" class="dropdown-header" role="menuitem">Item</a>
+          <li class="divider" role="menuitem"></li>
+          <a href="#" class="dropdown-header" role="presentation">Header 2</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="container-fluid">
+      <button type="button" class="btn btn-primary" data-target="#myInquiry" data-toggle="modal" data-orderNum="1134">
+        Order Number 1134 - Contact Us
+      </button>
+      <div class="modal" id="myInquiry" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myModalLabel">Thank you for contacting us</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <label for="inquiry">Your inquiry: </label>
+              <textarea class="form-control" id="inquiry" rows="8" cols="80"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Scrollspy -->
+    <!-- <div class="container-fluid" data-spy="scroll" data-target="navbar">
+    </div> -->
+
+
+    <!-- Tooltips -->
+    <div class="container-fluid">
+      <div class="">
+        <br>
+        <p>This is a <a href="https://google.com" title="Google" data-toggle="tooltip" data-placement="right">link</a></p>
+        <button type="button" class="btn btn-primary" data-toggle="tooltip" title="button tooltip" data-placement="bottom">Tooltip</button>
+      </div>
+    </div>
+
+
+    <!-- Popovers -->
+    <div class="container-fluid">
+      <br>
+      <button type="button" class="btn btn-primary" data-toggle="popover" data-content="<h4>This is a popover hey hey!</h4>" data-trigger="hover">Popover</button>
+    </div>
+
+
+    <!-- Alert Message -->
+    <div class="container-fluid">
+      <br>
+      <div class="alert alert-warning" id="alert">
+        <a class="close" data-dismiss="alert">&times;</a>
+        Warning! Your unsaved data was lost.
+      </div>
+      <div class="alert alert-success" id="alert">
+        <a class="close" data-dismiss="alert">&times;</a>
+        Success!
+      </div>
+    </div>
+
+
+    <!-- Button Plugin -->
+    <div class="container-fluid">
+      <button type="button" class="btn btn-primary" id="buttonloading" data-loading-text="Loading..." autocomplete="off">Button 1</button>
+    </div>
+
+
+    <!-- Collapsable -->
+    <div class="container-fluid">
+      <a href="#collapseContent" class="btn btn-primary" data-toggle="collapse">Link</a>
+      <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseContent">Button</button>
+      <div class="collapse bg-danger" id="collapseContent">
+        <p>Collapsable Content</p>
+        <p>Collapsable Content</p>
+        <p>Collapsable Content</p>
+      </div>
+      <br>
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <h4 class="panel-title"><a href="#collapsebody1" data-toggle="collapse" data-parent="#accordion">Section 1</a></h4>
+          </div>
+          <div class="panel-collapse collapse in" id="collapsebody1">
+            <div class="panel-bady">
+              <p>Collapsable Content</p>
+              <p>Collapsable Content</p>
+              <p>Collapsable Content</p>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h4 class="panel-title"><a href="#collapsebody2" data-toggle="collapse" data-parent="#accordion">Section 1</a></h4>
+          </div>
+          <div class="panel-collapse collapse in" id="collapsebody2">
+            <div class="panel-bady">
+              <p>Collapsable Content</p>
+              <p>Collapsable Content</p>
+              <p>Collapsable Content</p>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h4 class="panel-title"><a href="#collapsebody3" data-toggle="collapse" data-parent="#accordion">Section 1</a></h4>
+          </div>
+          <div class="panel-collapse collapse in" id="collapsebody3">
+            <div class="panel-bady">
+              <p>Collapsable Content</p>
+              <p>Collapsable Content</p>
+              <p>Collapsable Content</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $('[data-toggle="tooltip"]').tooltip();
+      // $('[data-toggle="tooltip"]').tooltip('show');
+      $(function() {
+        $('[data-toggle="popover"]').popover({
+          html: true,
+          delay: {"show": 500, "hide": 300}
+        });
+        $('.alert').on('closed.bs.alert', function() {
+          window.alert('Alert message closed!');
+        });
+      });
+      $(function() {
+        $('#buttonloading').on('click', function() {
+          var $btn = $(this).button('loading')
+          $btn.button('reset')
+        });
+      });
+
+    </script>
   </body>
 </html>
